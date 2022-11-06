@@ -16,6 +16,21 @@ yarn add @apollo/client graphql
 
 [How To Build A GraphQL Server Using Next.js API Routes](https://www.smashingmagazine.com/2020/10/graphql-server-next-javascript-api-routes/)
 
+
+[View GraphQL Playground](http://localhost:3000/api/graphql)
+
+
+```
+{
+  getUsers {
+    id
+    login
+    avatar_url
+  }
+}
+```
+
+
 ```
 curl --request POST \
     --header 'content-type: application/json' \
@@ -23,6 +38,16 @@ curl --request POST \
     --data '{"query":"{getUsers {id login avatar_url}}"}' | jq
 ```
 
+
+```
+query($name: String!){
+  getUser(name:$name){
+        login
+    id
+    avatar_url
+  }
+}
+```
 
 ```
 curl --request POST \

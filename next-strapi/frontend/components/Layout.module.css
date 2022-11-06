@@ -1,0 +1,10 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem 10%;
+    height: 5rem;
+    color: white;
+    background-color: #202020;
+  }
